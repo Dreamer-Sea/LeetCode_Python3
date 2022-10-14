@@ -20,11 +20,12 @@ class Solution:
                 if backtracking(end_point):
                     return True
                 path.pop()
-                tickets_dict[start_point].append(end_point)
+                to_list.append(end_point)
+
         backtracking("JFK")
         return path
 
 
 if __name__ == '__main__':
     s = Solution()
-    print(s.findItinerary([["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]))
+    print(s.findItinerary([["MUC", "LHR"], ["JFK", "MUC"], ["SFO", "SJC"], ["LHR", "SFO"]]))
